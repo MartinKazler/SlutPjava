@@ -13,11 +13,10 @@ public class Soundplayer extends Frame implements ActionListener, WindowListener
 	private static final long serialVersionUID = 1L;
     private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
     private Clip clip; // Clip is a program in awt that makes clips/sounds work
-    private boolean isPlaying = true;
-   // Constructor to setup GUI components and event handlers
-   public Soundplayer () {
+    private boolean isPlaying = true;  //the boolean is used to store only two possible values, either true or false
+    public Soundplayer () {  // event handlers
       setLayout(new GridLayout(3, 2, 3, 3));
-         // "super" Frame sets layout to 3x2 GridLayout, horizontal and vertical gaps of 3 pixels
+         // Frame sets layout to 3x2 GridLayout, horizontal and vertical gaps of 3 pixels
       // The components are added from left-to-right, top-to-bottom
       btn1 = new Button("Cat"); // gives each button a name
       add(btn1); 
@@ -47,7 +46,7 @@ public class Soundplayer extends Frame implements ActionListener, WindowListener
       btn7.addActionListener(this);
       btn8.addActionListener(this);
       btn9.addActionListener(this); // adds a Listener to each button
-      setTitle("Sound"); // sets title
+      setTitle("SoundBoard"); // sets title
       setSize(1000, 400);           // initial size
       setVisible(true);        //  Frame shows
       try{                                        // try/catch picks up any exceptions/ errors that might happen.
